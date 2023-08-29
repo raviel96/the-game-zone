@@ -1,0 +1,17 @@
+{
+    "name": "manue/the-game-zone",
+    "autoload": {
+        "psr-4": {
+            "app\\": "./app"
+        }
+    },
+    "authors": [
+        {
+            "name": "raviel96",
+            "email": "manuelfontaine971@gmail.com"
+        }
+    ],
+    "require": {
+        "vlucas/phpdotenv": "^5.5"
+    }
+}
