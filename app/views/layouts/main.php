@@ -38,16 +38,16 @@ use app\core\Application;
                             <li><a href="/">Accueil</a></li>
                             <li>
                                 <a class="dropdown">
-                                    Catégories
+                                    Genre
                                     <ul class="dropdown-content flex">
-                                        <li><a href="">Action</a></li>
-                                        <li><a href="">Aventure</a></li>
-                                        <li><a href="">Tir</a></li>
-                                        <li><a href="">Horreur</a></li>
-                                        <li><a href="">RPG</a></li>
-                                        <li><a href="">Roguelike</a></li>
-                                        <li><a href="">Sport</a></li>
-                                        <li><a href="">Combat</a></li>
+                                        <li><a href="/search?genre=action">Action</a></li>
+                                        <li><a href="/search?genre=aventure">Aventure</a></li>
+                                        <li><a href="/search?genre=tir">Tir</a></li>
+                                        <li><a href="/search?genre=horreur">Horreur</a></li>
+                                        <li><a href="/search?genre=rpg">RPG</a></li>
+                                        <li><a href="/search?genre=roguelike">Roguelike</a></li>
+                                        <li><a href="/search?genre=sport">Sport</a></li>
+                                        <li><a href="/search?genre=combat">Combat</a></li>
                                     </ul>
                                 </a>
                             </li>

@@ -6,7 +6,7 @@ use app\core\Controller;
 use app\core\middlewares\AuthMiddleware;
 use app\core\Request;
 use app\core\Response;
-use app\models\LoginForm;
+use app\models\Login;
 use app\models\User;
 
 class AuthController extends Controller {
@@ -17,16 +17,16 @@ class AuthController extends Controller {
 
     public function login(Request $request, Response $response) {
 
-        $loginForm = new LoginForm();
+        $login = new Login();
         
         if($request->isPost()) {
-            $loginForm->loadData($request->getData());
-            if($loginForm->validate() && $loginForm->login()) {
+            $login->loadData($request->getData());
+            if($login->validate() && $login->login()) {
                 $response->redirect("/");
             }
         }
 
-        return $this->render("login", ['model' => $loginForm]);
+        return $this->renderOnlyView("login", ['model' => $login]);
     }
 
     public function register(Request $request, Response $response) {
@@ -42,10 +42,10 @@ class AuthController extends Controller {
                 $response->redirect("/");
             } 
 
-            return $this->render("register", ['model' => $user]);
+            return $this->renderOnlyView("register", ['model' => $user]);
         }
 
-        return $this->render("register", ['model' => $user]);
+        return $this->renderOnlyView("register", ['model' => $user]);
     }
 
     public function logout(Request $request, Response $response) {

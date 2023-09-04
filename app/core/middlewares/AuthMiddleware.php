@@ -16,7 +16,7 @@ class AuthMiddleware extends BaseMiddleware {
     public function execute() {
         
         if(!Application::isConnected()) {
-            if(empty($this->actions) || in_array(Application::$app->getController()->action, $this->actions)) {
+            if(empty($this->actions) || in_array(Application::$app->getController()->getAction(), $this->actions)) {
                 throw new AccessDeniedException();
             }
         }
